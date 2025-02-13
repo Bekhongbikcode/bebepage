@@ -1,0 +1,136 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ffe6e6 0%, #ffb3d9 100%);
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 90%;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #ff4d94;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+.buttons {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes-button,
+.no-button {
+  font-size: 1.5em;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #ff66b2, #ff99cc);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 102, 178, 0.4);
+}
+
+.yes-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 102, 178, 0.6);
+}
+
+.no-button {
+  background: #ffffff;
+  color: #ff66b2;
+  border: 2px solid #ff99cc;
+}
+
+.no-button:hover {
+  background: #ffecf2;
+}
+
+.gif_container img {
+  max-width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: #ff66b2;
+  animation: float 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
